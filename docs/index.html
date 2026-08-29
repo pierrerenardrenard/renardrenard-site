@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pierre Renard — Artistic Direction & Production</title>
+<meta name="description" content="Pierre Renard is a Berlin-based artistic director and producer working across live performance, live music, the club scene, and contemporary art.">
+<meta property="og:title" content="Pierre Renard — Artistic Direction &amp; Production">
+<meta property="og:description" content="Berlin-based artistic director and producer working across live performance, live music, the club scene, and contemporary art.">
+<meta property="og:image" content="https://renardrenard.com/og.jpg">
+<meta property="og:url" content="https://renardrenard.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://renardrenard.com/og.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#F5F2ED;--ink:#1C1A17;--ink-muted:rgba(28,26,23,0.58);--ink-faint:rgba(28,26,23,0.22);--accent:#8B6A4E;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.7;min-height:100vh;overflow-x:hidden}
+
+.top-banner{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--ink);color:var(--bg);font-size:11px;letter-spacing:0.1em;text-align:center;padding:0.5rem 2rem;font-family:var(--sans);font-weight:300}
+nav{position:fixed;top:32px;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.5rem 4rem;background:var(--bg);border-bottom:0.5px solid var(--ink-faint)}
+.nav-name{font-family:var(--serif);font-size:1.1rem;font-weight:300;letter-spacing:0.05em;color:var(--ink);text-decoration:none;cursor:pointer}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:11px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;transition:color 0.2s;cursor:pointer}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+
+.page{display:none}
+.page.active{display:block}
+main{padding-top:112px}
+section{padding:6rem 4rem}
+.rule{width:100%;height:0.5px;background:var(--ink-faint)}
+.btn{display:inline-block;font-family:var(--sans);font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--bg);background:var(--ink);text-decoration:none;transition:background 0.2s;cursor:pointer}
+.btn:hover{background:var(--accent)}
+.section-title{font-family:var(--serif);font-size:2.1rem;font-weight:700;font-style:italic;letter-spacing:0;text-transform:none;color:var(--ink);margin-bottom:2.5rem;position:relative;padding-top:1.5rem}
+.section-title::before{content:'';position:absolute;top:0;left:0;width:2.5rem;height:2px;background:var(--accent)}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;min-height:calc(100vh - 112px);padding-top:4rem;padding-bottom:6rem}
+.hero-tagline-text{font-family:var(--serif);font-size:1.5rem;font-weight:300;line-height:1.5;font-style:italic;margin-bottom:2rem;color:var(--ink)}
+.hero-tagline-text em{color:var(--accent);font-style:normal}
+.hero-cta{display:inline-block;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;cursor:pointer}
+.hero-cta:hover{color:var(--accent);border-color:var(--accent)}
+.hero-right{display:flex;flex-direction:column;justify-content:center}
+.hero-bio{font-size:15px;color:var(--ink-muted);line-height:1.8;margin-bottom:1.5rem}
+.hero-about{font-family:var(--serif);font-size:1.1rem;font-weight:300;line-height:1.7;color:var(--ink-muted);margin-bottom:2rem}
+.hero-meta-item{display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.08em;padding:0.6rem 0;border-top:0.5px solid var(--ink-faint);color:var(--ink-muted);gap:1rem}
+.hero-meta-item:last-child{border-bottom:0.5px solid var(--ink-faint)}
+.hero-meta-item span:first-child{white-space:nowrap}
+.hero-meta-item span:last-child{color:var(--ink);text-align:right}
+
+/* NEXT UP */
+.coming-up-item{padding:2rem 0;border-top:0.5px solid var(--ink-faint)}
+.coming-up-item:last-child{border-bottom:0.5px solid var(--ink-faint)}
+.coming-up-name-wrap{display:flex;flex-direction:column;gap:0.35rem}
+.coming-up-title{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--ink);line-height:1.1;text-decoration:none;font-style:italic}
+.coming-up-title:hover{color:var(--accent)}
+.coming-up-context{font-size:11px;letter-spacing:0.06em;color:var(--ink-muted);margin-top:0.15rem}
+.coming-up-subtitle{font-size:13px;color:var(--ink-muted);line-height:1.7;margin-top:0.15rem;font-style:italic;max-width:640px}
+.coming-up-role{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);margin-top:0.35rem}
+.ticket-link{font-size:10px;padding:0.6rem 1.2rem;margin-top:1rem;align-self:flex-end}
+
+/* PROJECT LISTS */
+.project-list{list-style:none}
+.project-item{padding:2rem 0;border-top:0.5px solid var(--ink-faint);cursor:default}
+.project-item:last-child{border-bottom:0.5px solid var(--ink-faint)}
+.project-name-wrap{display:flex;flex-direction:column;gap:0.35rem}
+.project-title{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--ink);line-height:1.1;text-decoration:none;font-style:italic}
+.project-title:hover{color:var(--accent)}
+.project-context{font-size:11px;letter-spacing:0.06em;color:var(--ink-muted);margin-top:0.15rem}
+.project-subtitle{font-size:13px;color:var(--ink-muted);line-height:1.6;margin-top:0.15rem;font-style:italic;max-width:640px}
+.project-includes{font-size:13px;color:var(--ink-muted);line-height:1.6;margin-top:0.35rem;font-style:italic;max-width:640px}
+.project-role{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);margin-top:0.35rem}
+
+/* PHOTOS */
+.site-photo{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.photo-frame{width:100%;aspect-ratio:3/2;overflow:hidden;display:flex;gap:4px;background:var(--bg);margin-top:1rem}
+.photo-frame img{height:100%;width:100%;object-fit:cover;display:block;flex:1 1 0;min-width:0}
+.photo-frame .wide{flex:7 1 0}
+.photo-frame .narrow{flex:3 1 0}
+.photo-frame.carousel{position:relative;display:block}
+.photo-frame.carousel img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.photo-frame.carousel img.active{opacity:1}
+
+/* CURATORIAL STATEMENT */
+.curatorial-statement{font-family:var(--serif);font-size:1.2rem;font-weight:300;line-height:1.8;color:var(--ink-muted);max-width:720px;margin-bottom:5rem}
+.curatorial-statement p{margin-bottom:1.5rem}
+.curatorial-statement p:last-child{margin-bottom:0}
+
+/* WORKSHOPS */
+.workshops-section{margin-top:5rem;padding-top:4rem;border-top:0.5px solid var(--ink-faint)}
+.workshops-intro{font-size:13px;color:var(--ink-muted);line-height:1.8;max-width:600px;margin-bottom:3rem}
+.workshop-list{list-style:none}
+.workshop-item{padding:1.5rem 0;border-top:0.5px solid var(--ink-faint)}
+.workshop-item:last-child{border-bottom:0.5px solid var(--ink-faint)}
+.workshop-title{font-family:var(--serif);font-size:1.2rem;font-weight:300;color:var(--ink);font-style:italic;margin-bottom:0.25rem}
+.workshop-artists{font-size:11px;letter-spacing:0.06em;color:var(--ink-muted);margin-bottom:0.4rem}
+.workshop-desc{font-size:12px;color:var(--ink-muted);line-height:1.7;max-width:560px}
+
+/* CLIENTS */
+.clients-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.client-logo-item{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:2rem;border-top:0.5px solid var(--ink-faint);border-right:0.5px solid var(--ink-faint);transition:opacity 0.25s;cursor:default}
+.clients-grid:hover .client-logo-item{opacity:0.3}
+.clients-grid .client-logo-item:hover{opacity:1}
+.client-logo-item:nth-child(3n){border-right:none}
+.client-logo-text{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink)}
+.client-logo-type{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);margin-top:0.3rem}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+.contact-heading{font-family:var(--serif);font-size:clamp(2.5rem,4vw,4rem);font-weight:700;line-height:1.1;margin-bottom:1.5rem}
+.contact-heading em{font-style:italic;color:var(--accent)}
+.contact-sub{color:var(--ink-muted);font-size:14px;max-width:300px;line-height:1.8}
+.contact-right{display:flex;flex-direction:column;gap:1.5rem}
+.contact-mailto{font-size:11px;letter-spacing:0.14em;padding:1rem 2rem;align-self:flex-end}
+.contact-note{font-size:12px;color:var(--ink-muted);line-height:1.7}
+.social-links{display:flex;flex-direction:column;gap:0}
+.social-link{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 0;border-top:0.5px solid var(--ink-faint);font-size:12px;color:var(--ink);text-decoration:none;letter-spacing:0.05em;transition:color 0.2s}
+.social-link:last-child{border-bottom:0.5px solid var(--ink-faint)}
+.social-link:hover{color:var(--accent)}
+.social-link-label{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted)}
+
+/* IMPRINT */
+.imprint-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem}
+.imprint-label{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1rem}
+.imprint-text{font-size:13px;color:var(--ink-muted);line-height:1.8}
+.imprint-text strong{color:var(--ink);font-weight:400}
+
+/* INNER PAGES */
+.page-header{padding:4rem 4rem 2rem;border-bottom:0.5px solid var(--ink-faint)}
+.page-header-title{font-family:var(--serif);font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:0.95;color:var(--ink)}
+.back-link{display:inline-block;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;margin-bottom:1.5rem;transition:color 0.2s;cursor:pointer}
+.back-link:hover{color:var(--ink)}
+.view-all-link{font-size:11px;padding:0.6rem 1.2rem}
+
+footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid var(--ink-faint)}
+.footer-text{font-size:11px;color:var(--ink-faint);letter-spacing:0.08em;text-decoration:none;cursor:pointer}
+.footer-links{display:flex;gap:1.5rem;align-items:center}
+.footer-link{font-size:11px;color:var(--ink-faint);letter-spacing:0.08em;text-decoration:none;transition:color 0.2s;cursor:pointer}
+.footer-link:hover{color:var(--ink-muted)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-tagline-text{animation:fadeUp 0.8s ease 0.1s both}
+.hero-cta{animation:fadeUp 0.8s ease 0.25s both}
+.hero-right{animation:fadeUp 0.8s ease 0.4s both}
+
+@media(max-width:768px){
+  nav{padding:1.25rem 1.5rem}
+  .nav-links{gap:1rem}
+  .nav-links a{font-size:10px}
+  section{padding:4rem 1.5rem}
+  .hero{grid-template-columns:1fr;gap:3rem;min-height:auto;padding-top:3rem;padding-bottom:4rem}
+  .hero-bio,.hero-about{max-width:100%}
+  .contact-grid{grid-template-columns:1fr;gap:3rem}
+  .imprint-grid{grid-template-columns:1fr;gap:3rem}
+  .clients-grid{grid-template-columns:repeat(2,1fr)}
+  .client-logo-item:nth-child(3n){border-right:0.5px solid var(--ink-faint)}
+  .client-logo-item:nth-child(2n){border-right:none}
+  .page-header{padding:3rem 1.5rem 2rem}
+  footer{padding:1.5rem;flex-direction:column;gap:0.75rem;align-items:flex-start}
+  .hero-meta-item span:last-child{text-align:right}
+}
+</style>
+</head>
+<body>
+
+<div class="top-banner">Website under construction • more work and pictures to follow.</div>
+
+<nav>
+  <a class="nav-name" onclick="showPage('home')">Pierre Renard</a>
+  <ul class="nav-links">
+    <li><a onclick="showPage('production')" id="nav-production">Production</a></li>
+    <li><a onclick="showPage('curation')" id="nav-curation">Curation</a></li>
+    <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+    <li><a onclick="showPage('imprint')" id="nav-imprint">Imprint</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- HOME PAGE -->
+  <div class="page active" id="page-home">
+    <section class="hero">
+      <div class="hero-left">
+        <p class="hero-tagline-text">Working at the intersection of <em>production and curation</em>, with eclectic, boundary-pushing artists and the institutions that support them.</p>
+        <a class="hero-cta" onclick="showPage('contact')">Get in touch</a>
+        <figure style="margin-top:2.5rem;margin-bottom:0">
+          <div class="photo-frame carousel">
+            <img src="images/img-01-156a949e2d.jpg" alt="From the Throat to the Dawn, Sorour Darabi — TRAUMA Bar und Kino, 2023. © Camille Blake" data-caption="From the Throat to the Dawn, Sorour Darabi — TRAUMA Bar und Kino, 2023. © Camille Blake" class="active" decoding="async">
+            <img src="images/img-31-hero-crowd.jpg" alt="TRAUMA Bar und Kino, Berlin" data-caption="TRAUMA Bar und Kino, Berlin" loading="lazy" decoding="async">
+            <img src="images/img-32-hero-trauma.jpg" alt="TRAUMA Bar und Kino, Berlin" data-caption="TRAUMA Bar und Kino, Berlin" loading="lazy" decoding="async">
+            <img src="images/img-33-hero-dj.jpg" alt="CLEF LUTE TANGO LOUD PHOTON, Amnesia Scanner &amp; Debit — LAS Art Foundation, Halle am Berghain" data-caption="CLEF LUTE TANGO LOUD PHOTON, Amnesia Scanner &amp; Debit — LAS Art Foundation, Halle am Berghain" loading="lazy" decoding="async">
+          </div>
+          <figcaption data-caption-target style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.5rem;min-height:36px">From the Throat to the Dawn, Sorour Darabi — TRAUMA Bar und Kino, 2023. © Camille Blake</figcaption>
+        </figure>
+      </div>
+      <div class="hero-right">
+        <p class="hero-bio">I support artists and arts organisations to develop their visions within space, time, and budget, across live performance, live music, the club scene, and contemporary art.</p>
+        <p class="hero-about">Based in Berlin for over a decade, I have built a practice spanning both institutional and independent contexts, producing large-scale live events, developing dance programmes, and serving on national jury panels for choreography. My work moves fluidly between production and curation, bringing the same rigour to a 50-person event as to a 10,000+ person festival. Over the years I have built a reliable network of collaborators across every discipline an event requires, from sound and lighting to stagehands, front of house, door, security, and awareness teams.</p>
+        <div>
+          <div class="hero-meta-item"><span>Discipline</span><span>Live Performance · Live Music · Event Production · Contemporary Art</span></div>
+          <div class="hero-meta-item"><span>Based</span><span>Berlin, Germany · Open to relocation</span></div>
+          <div class="hero-meta-item"><span>Available for</span><span>Production · Curation · Consulting</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <p class="section-title">Next Up</p>
+      <div class="coming-up-item">
+        <div class="coming-up-name-wrap">
+          <a class="coming-up-title" href="https://superbloom.de/tickets" target="_blank">Superbloom Festival</a>
+          <p class="coming-up-context">Olympiapark, Munich · 29 Aug — 4 Sep 2026</p>
+          <p class="coming-up-subtitle">A multi-genre lifestyle and music festival transforming Munich's Olympiapark into a week of live performances, experience areas and cultural programming. 50,000 guests per day, headliners including Lorde, Kygo and Lewis Capaldi.</p>
+          <p class="coming-up-role">Producer</p>
+          <a class="btn ticket-link" href="https://superbloom.de/tickets" target="_blank">Tickets →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <p class="section-title">Selected Productions</p>
+      <ul class="project-list">
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://www.las-art.foundation/explore/clef-lute-tango-loud-photon-amnesia-scanner-feat-debit" target="_blank">CLEF LUTE TANGO LOUD PHOTON</a>
+            <p class="project-context">LAS Art Foundation, Halle am Berghain, Berlin · 5 Feb 2026</p>
+            <p class="project-subtitle">A sonic and visual exploration of Halle am Berghain by Amnesia Scanner, Debit, and Jenna Sutela</p>
+            <p class="project-includes">This immersive production includes Live AV, Spatial Sound, and LED Screens.</p>
+            <p class="project-role">Production</p>
+            <div class="photo-frame">
+              <img class="wide" src="images/img-30-clef-b.jpg" alt="CLEF LUTE TANGO LOUD PHOTON, LAS Art Foundation, Halle am Berghain" loading="lazy" decoding="async">
+              <img class="narrow" src="images/img-29-clef-a.jpg" alt="CLEF LUTE TANGO LOUD PHOTON, LAS Art Foundation, Halle am Berghain" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://www.las-art.foundation/programme/pierre-huyghe" target="_blank">Liminals</a>
+            <p class="project-context">LAS Art Foundation, Halle am Berghain, Berlin · 23 Jan — 8 Mar 2026</p>
+            <p class="project-subtitle">A large-scale immersive commission by Pierre Huyghe delving into quantum uncertainty through film, sound, and vibration</p>
+            <p class="project-includes">This production includes Exhibition, Exhibition Design, Visitor Flow, and Learning Space.</p>
+            <p class="project-role">Production · Exhibition Design · Audience Experience</p>
+            <div class="photo-frame">
+              <img class="wide" src="images/img-22-liminals-install.jpg" alt="Liminals, Pierre Huyghe, LAS Art Foundation, Halle am Berghain" loading="lazy" decoding="async">
+              <img class="narrow" src="images/img-28-liminals-panel.jpg" alt="Liminals, Pierre Huyghe — wall text, LAS Art Foundation, Halle am Berghain" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">WHOLE Festival — Editions 7 &amp; 8</span>
+            <p class="project-context">Ferropolis, Gräfenhainichen · 2022–2026</p>
+            <p class="project-subtitle">The largest queer electronic music festival in the world, 10,000+ guests across six stages at Ferropolis</p>
+            <p class="project-role">Production · Artist Liaison</p>
+            <div class="photo-frame carousel">
+              <img class="active" src="images/img-18-whole-crowd.jpg" alt="WHOLE Festival, Ferropolis, dance floor" loading="lazy" decoding="async">
+              <img src="images/img-19-whole-aerial.jpg" alt="WHOLE Festival, Ferropolis, aerial view" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div style="margin-top:2rem;text-align:right"><a class="btn view-all-link" onclick="showPage('production')">View all productions →</a></div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <p class="section-title">Selected Curatorial Projects</p>
+      <ul class="project-list">
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://trauma.art/program/from-the-throat-to-the-dawn" target="_blank">From the Throat to the Dawn</a>
+            <p class="project-context">TRAUMA Arts and Culture, Berlin</p>
+            <p class="project-subtitle">Sorour Darabi with Petra Hermanova, Bella Báguena, Djibril Sall, Detente, Li-Yun Hu, Pablo Altar, and Sebastian Abarbanell. An endurance piece for eight performers combining live music, dance and experimental opera, staged within a sculptural environment of slowly melting ice.</p>
+            <p class="project-includes">This production includes Live Music, Contemporary Dance, and Experimental Opera.</p>
+            <p class="project-role">Curation &amp; Production</p>
+            <div class="photo-frame carousel">
+              <img class="active" src="images/img-02-385efb9a7b.jpg" alt="From the Throat to the Dawn, 2023. © Camille Blake" loading="lazy" decoding="async">
+              <img src="images/img-03-e0375fd24a.jpg" alt="From the Throat to the Dawn, 2023. © Camille Blake" loading="lazy" decoding="async">
+              <img src="images/img-04-2afec80c94.jpg" alt="From the Throat to the Dawn, 2023. © Camille Blake" loading="lazy" decoding="async">
+              <img src="images/img-05-05633cb6ee.jpg" alt="From the Throat to the Dawn, 2023. © Camille Blake" loading="lazy" decoding="async">
+            </div>
+            <p style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.4rem">© Camille Blake</p>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://trauma.art/program/deepspace" target="_blank">Deepspace</a>
+            <p class="project-context">TRAUMA Arts and Culture, Berlin</p>
+            <p class="project-subtitle">James Batchelor with Chloe Chignell &amp; GiGi FM. A two-part evening opening with a deep listening sonic experience by GiGi FM, followed by a choreographic duet by James Batchelor. An immersive journey through space, science, and the unknown.</p>
+            <p class="project-includes">This immersive production includes Deep Listening, Contemporary Dance, and Live Music.</p>
+            <p class="project-role">Curation &amp; Production</p>
+            <div class="photo-frame carousel">
+              <img class="active" src="images/img-07-3af686e983.jpg" alt="Deepspace, James Batchelor, 2023. © Camille Blake" loading="lazy" decoding="async">
+              <img src="images/img-08-2c84ca7181.jpg" alt="Deepspace, James Batchelor, 2023. © Camille Blake" loading="lazy" decoding="async">
+            </div>
+            <p style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.4rem">© Camille Blake</p>
+          </div>
+        </li>
+      </ul>
+      <div style="margin-top:2rem;text-align:right"><a class="btn view-all-link" onclick="showPage('curation')">View all curatorial projects →</a></div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <p class="section-title">Clients &amp; Collaborators</p>
+      <div class="clients-grid">
+        <div class="client-logo-item"><span class="client-logo-text">LAS Art Foundation</span><span class="client-logo-type">Art Institution</span></div>
+        <div class="client-logo-item"><span class="client-logo-text">TRAUMA Arts and Culture</span><span class="client-logo-type">Independent Organisation</span></div>
+        <div class="client-logo-item"><span class="client-logo-text">WHOLE Festival</span><span class="client-logo-type">Festival</span></div>
+        <div class="client-logo-item"><span class="client-logo-text">Good Live</span><span class="client-logo-type">Festival</span></div>
+        <div class="client-logo-item"><span class="client-logo-text">Pictoplasma</span><span class="client-logo-type">Festival</span></div>
+        <div class="client-logo-item"><span class="client-logo-text">Fairground Festival</span><span class="client-logo-type">Festival</span></div>
+        <div class="client-logo-item"><span class="client-logo-text">Jack Bannerman</span><span class="client-logo-type">Choreographer</span></div>
+        <div class="client-logo-item"><span class="client-logo-text">Ben Rentz Ensemble</span><span class="client-logo-type">Choreographer</span></div>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="contact-grid">
+        <div>
+          <h2 class="contact-heading">Get<br>in <em>touch</em></h2>
+          <p class="contact-sub">Open to production mandates, curatorial collaborations, and consulting for arts organisations across Europe.</p>
+        </div>
+        <div class="contact-right">
+          <a class="btn contact-mailto" href="mailto:pierre@renardrenard.com?subject=Hello Pierre">Send a message →</a>
+          <p class="contact-note">Clicking the button will open your email with my address prefilled.</p>
+          <div class="social-links">
+            <a class="social-link" href="https://www.instagram.com/revalerstrasse" target="_blank"><span class="social-link-label">Instagram</span><span>@revalerstrasse</span></a>
+            <a class="social-link" href="https://www.linkedin.com/in/pierre-renard-b37674113/" target="_blank"><span class="social-link-label">LinkedIn</span><span>Pierre Renard</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <footer>
+      <p class="footer-text">© 2026 Pierre Renard — Berlin, Germany</p>
+      <div class="footer-links">
+        <a class="footer-link" href="https://www.instagram.com/revalerstrasse" target="_blank">Instagram</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/pierre-renard-b37674113/" target="_blank">LinkedIn</a>
+        <a class="footer-link" onclick="showPage('imprint')">Imprint &amp; Privacy</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- PRODUCTION PAGE -->
+  <div class="page" id="page-production">
+    <div class="page-header">
+      <a class="back-link" onclick="showPage('home')">← Back</a>
+      <h1 class="page-header-title">Production</h1>
+    </div>
+    <section>
+      <ul class="project-list">
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://www.las-art.foundation/explore/clef-lute-tango-loud-photon-amnesia-scanner-feat-debit" target="_blank">CLEF LUTE TANGO LOUD PHOTON</a>
+            <p class="project-context">LAS Art Foundation, Halle am Berghain, Berlin · 5 Feb 2026</p>
+            <p class="project-subtitle">A sonic and visual exploration of Halle am Berghain by Amnesia Scanner, Debit, and Jenna Sutela</p>
+            <p class="project-includes">This immersive production includes Live AV, Spatial Sound, and LED Screens.</p>
+            <p class="project-role">Production</p>
+            <div class="photo-frame">
+              <img class="wide" src="images/img-30-clef-b.jpg" alt="CLEF LUTE TANGO LOUD PHOTON, LAS Art Foundation, Halle am Berghain" loading="lazy" decoding="async">
+              <img class="narrow" src="images/img-29-clef-a.jpg" alt="CLEF LUTE TANGO LOUD PHOTON, LAS Art Foundation, Halle am Berghain" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://trauma.art/program/cicciolinas-dream" target="_blank">Cicciolina's Dream</a>
+            <p class="project-context">TRAUMA, Venice, Italy · 6 May 2026</p>
+            <p class="project-subtitle">Opening celebration of Maja Malou Lÿse's work at the Danish Pavilion, 61st Venice Biennale, with Ilona Staller, Courtesy, Mina Galán, and felicita. Commissioned by the Danish Arts Foundation.</p>
+            <p class="project-includes">This production includes Live Music, 360° Stage, Floral Scenography, Invite-Only, and VIP Access Management.</p>
+            <p class="project-role">Production · Door Management</p>
+            <figure style="margin-top:1rem;margin-bottom:0">
+              <img src="images/img-27-cicciolina.jpg" alt="Cicciolina's Dream, TRAUMA, Venice. Photo: Troels Primdahl" class="site-photo" loading="lazy" decoding="async">
+              <figcaption style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.4rem">Photo: Troels Primdahl</figcaption>
+            </figure>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">WHOLE Festival — Editions 7 &amp; 8</span>
+            <p class="project-context">Ferropolis, Gräfenhainichen · 2022–2026</p>
+            <p class="project-subtitle">The largest queer electronic music festival in the world, 10,000+ guests across six stages at Ferropolis</p>
+            <p class="project-role">Production · Artist Liaison</p>
+            <div class="photo-frame carousel">
+              <img class="active" src="images/img-18-whole-crowd.jpg" alt="WHOLE Festival, Ferropolis, dance floor" loading="lazy" decoding="async">
+              <img src="images/img-19-whole-aerial.jpg" alt="WHOLE Festival, Ferropolis, aerial view" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://www.las-art.foundation/programme/pierre-huyghe" target="_blank">Liminals</a>
+            <p class="project-context">LAS Art Foundation, Halle am Berghain, Berlin · 23 Jan — 8 Mar 2026</p>
+            <p class="project-subtitle">A large-scale immersive commission by Pierre Huyghe delving into quantum uncertainty through film, sound, and vibration</p>
+            <p class="project-includes">This production includes Exhibition, Exhibition Design, Visitor Flow, and Learning Space.</p>
+            <p class="project-role">Production · Exhibition Design · Audience Experience</p>
+            <div class="photo-frame">
+              <img class="wide" src="images/img-22-liminals-install.jpg" alt="Liminals, Pierre Huyghe, LAS Art Foundation, Halle am Berghain" loading="lazy" decoding="async">
+              <img class="narrow" src="images/img-28-liminals-panel.jpg" alt="Liminals, Pierre Huyghe — wall text, LAS Art Foundation, Halle am Berghain" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://www.elisabeth.berlin/de/kulturkalender/hamza-shah-praesentiert-abimal-painting-language-gratitude" target="_blank">Abimal. Painting as a Language of Gratitude</a>
+            <p class="project-context">St. Elisabeth Kirche, Berlin · 29–31 May 2026</p>
+            <p class="project-subtitle">An immersive exhibition and performance work by Hamza Shah transforming St. Elisabeth Kirche into a space of inner reflection</p>
+            <p class="project-includes">This production includes Painting Installation, Live Choir, Live Electronic Music, and Multi-day Event.</p>
+            <p class="project-role">Production</p>
+            <div class="photo-frame">
+              <img class="wide" src="images/img-20-abimal.jpg" alt="Abimal, St. Elisabeth Kirche, Berlin. Photo: Pierre Renard" loading="lazy" decoding="async">
+              <img class="narrow" src="images/img-21-abimal-detail.jpg" alt="Abimal, detail. Photo: Pierre Renard" loading="lazy" decoding="async">
+            </div>
+            <p style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.4rem">Photo: Pierre Renard</p>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">Lollapalooza Berlin</span>
+            <p class="project-context">Berlin, Germany · 2025</p>
+            <p class="project-role">Producer</p>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">Pictoplasma Festival</span>
+            <p class="project-context">Berlin, Germany · 2019–2025</p>
+            <p class="project-role">Production Manager</p>
+            <div class="photo-frame carousel">
+              <img class="active" src="images/img-25-pictoplasma-choir.jpg" alt="Pictoplasma Festival, choir procession, Berlin" loading="lazy" decoding="async">
+              <img src="images/img-26-pictoplasma-awards.jpg" alt="Pictoplasma Festival, Original Characters award ceremony, Berlin" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">Superbloom</span>
+            <p class="project-context">Munich, Germany · 2024</p>
+            <p class="project-role">Producer</p>
+            <div class="photo-frame">
+              <img class="wide" src="images/img-23-superbloom-a.jpg" alt="Superbloom Festival, Olympiastadion, Munich" loading="lazy" decoding="async">
+              <img class="narrow" src="images/img-24-superbloom-b.jpg" alt="Superbloom Festival, Olympiapark, Munich" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">Melt Festival</span>
+            <p class="project-context">Ferropolis, Germany · 2024</p>
+            <p class="project-role">Producer</p>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">Fairground Festival</span>
+            <p class="project-context">Hannover, Germany · 2024</p>
+            <p class="project-role">Producer</p>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">DANCÆ</span>
+            <p class="project-context">Berlin, Germany · 2025</p>
+            <p class="project-role">Production Manager</p>
+            <figure style="margin-top:1rem;margin-bottom:0">
+              <img src="images/img-15-79c3ee65c8.jpg" alt="DANCÆ, Berlin" class="site-photo" loading="lazy" decoding="async">
+            </figure>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">Centre National de la Danse</span>
+            <p class="project-context">Pantin, France · 2016</p>
+            <p class="project-role">Production Intern</p>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">CCN – Ballet de Lorraine</span>
+            <p class="project-context">Nancy, France · 2015</p>
+            <p class="project-role">Production Intern</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <p class="footer-text">© 2026 Pierre Renard — Berlin, Germany</p>
+      <div class="footer-links">
+        <a class="footer-link" href="https://www.instagram.com/revalerstrasse" target="_blank">Instagram</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/pierre-renard-b37674113/" target="_blank">LinkedIn</a>
+        <a class="footer-link" onclick="showPage('imprint')">Imprint &amp; Privacy</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- CURATION PAGE -->
+  <div class="page" id="page-curation">
+    <div class="page-header">
+      <a class="back-link" onclick="showPage('home')">← Back</a>
+      <h1 class="page-header-title">Curatorial Projects</h1>
+    </div>
+    <section>
+      <div class="curatorial-statement">
+        <p>My curatorial practice moves across contemporary dance, ballet, urban and performative forms, with a consistent interest in site-specific work that plays on the porosity between audience and performance. I am working toward a deconstruction of traditional theatre times, the beginning and the end are structural markers of many venues, my work tends to fade them away, turning cultural spaces into a catalyst for bonding and lingering together. The work gathered below is made exclusively with artists who operate at the edges of their disciplines, often shaped by queer perspectives and marginalised voices.</p>
+        <p>My experience ranges from artist residencies to fully realised performances, and large-scale live events. For several years I shaped the dance programme at TRAUMA Arts and Culture in Berlin, consistently oriented toward experimentation and early-stage artists, providing infrastructure and curatorial support for work for emerging local artists and also for international artists. More recently, I have been developing Ripe, an independent series pairing wine with live performance and music. The next event is coming up on September 24th.</p>
+      </div>
+
+      <ul class="project-list">
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">Ripe</span>
+            <p class="project-context">Liquid Studio, Berlin</p>
+            <p class="project-subtitle">An afternoon of wine tasting paired with live performance</p>
+            <p class="project-includes">This production includes Curation, Production, Wine Tasting, Contemporary Dance, Krump, Ballet, and Pole Dance.</p>
+            <p class="project-role">Host &amp; Artistic Direction</p>
+            <div style="margin-top:1rem;position:relative;padding-bottom:56.25%;height:0;overflow:hidden">
+              <iframe src="https://www.youtube.com/embed/xfCudCN-GoM" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://trauma.art/program/from-the-throat-to-the-dawn" target="_blank">From the Throat to the Dawn</a>
+            <p class="project-context">TRAUMA Arts and Culture, Berlin</p>
+            <p class="project-subtitle">Sorour Darabi with Petra Hermanova, Bella Báguena, Djibril Sall, Detente, Li-Yun Hu, Pablo Altar, and Sebastian Abarbanell. An endurance piece for eight performers combining live music, dance and experimental opera, staged within a sculptural environment of slowly melting ice.</p>
+            <p class="project-includes">This production includes Live Music, Contemporary Dance, and Experimental Opera.</p>
+            <p class="project-role">Curation &amp; Production</p>
+            <div class="photo-frame carousel">
+              <img class="active" src="images/img-02-385efb9a7b.jpg" alt="From the Throat to the Dawn, 2023. © Camille Blake" loading="lazy" decoding="async">
+              <img src="images/img-03-e0375fd24a.jpg" alt="From the Throat to the Dawn, 2023. © Camille Blake" loading="lazy" decoding="async">
+              <img src="images/img-04-2afec80c94.jpg" alt="From the Throat to the Dawn, 2023. © Camille Blake" loading="lazy" decoding="async">
+              <img src="images/img-05-05633cb6ee.jpg" alt="From the Throat to the Dawn, 2023. © Camille Blake" loading="lazy" decoding="async">
+            </div>
+            <p style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.4rem">© Camille Blake</p>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://trauma.art/program/mist" target="_blank">Mist</a>
+            <p class="project-context">TRAUMA Arts and Culture, Berlin</p>
+            <p class="project-subtitle">Choreography by Damien Jalet for NDT, filmed by Rahi Rezvani. Prelude live poetry by Dove. A multidisciplinary dance film exploring a liminal space between reality and mirage through eighteen dancers of NDT 1 interacting with sculptural fog.</p>
+            <p class="project-includes">This production includes Cinema, Live Poetry, and Contemporary Dance.</p>
+            <p class="project-role">Curation &amp; Production</p>
+            <figure style="margin-top:1rem;margin-bottom:0">
+              <img src="images/img-06-fbe0b7a534.jpg" alt="Mist, Damien Jalet / NDT. © Rahi Rezvani" class="site-photo" loading="lazy" decoding="async">
+              <figcaption style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.4rem">© Rahi Rezvani</figcaption>
+            </figure>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://trauma.art/program/deepspace" target="_blank">Deepspace</a>
+            <p class="project-context">TRAUMA Arts and Culture, Berlin</p>
+            <p class="project-subtitle">James Batchelor with Chloe Chignell &amp; GiGi FM. A two-part evening opening with a deep listening sonic experience by GiGi FM, followed by a choreographic duet by James Batchelor. An immersive journey through space, science, and the unknown.</p>
+            <p class="project-includes">This immersive production includes Deep Listening, Contemporary Dance, and Live Music.</p>
+            <p class="project-role">Curation &amp; Production</p>
+            <div class="photo-frame carousel">
+              <img class="active" src="images/img-07-3af686e983.jpg" alt="Deepspace, James Batchelor, 2023. © Camille Blake" loading="lazy" decoding="async">
+              <img src="images/img-08-2c84ca7181.jpg" alt="Deepspace, James Batchelor, 2023. © Camille Blake" loading="lazy" decoding="async">
+            </div>
+            <p style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.4rem">© Camille Blake</p>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://trauma.art/program/441" target="_blank">4:4:1</a>
+            <p class="project-context">TRAUMA Arts and Culture, Berlin, and CDCN Chorège, Falaise</p>
+            <p class="project-subtitle">Charlotte Rousseau, Flora Pilet, Sebastian Abarbanell, Steven Fast. A four-week experimental residency bringing together four choreographers around the theme of impossible repetitions, culminating in two evenings of public presentations in France and Germany. In partnership with CDCN Chorège, supported by DRAC Normandie and Neustart Kultur, Initiative Musik. With the help of La Coopérative Chorégraphique de Caen, Le Sépulcre.</p>
+            <p class="project-includes">This production includes Contemporary Dance, Residency, and Research.</p>
+            <p class="project-role">Curation · Production · Funding</p>
+            <div class="photo-frame">
+              <img class="wide" src="images/img-09-273823c5d6.jpg" alt="4:4:1, TRAUMA Arts and Culture, 2021." loading="lazy" decoding="async">
+              <img class="narrow" src="images/img-10-601140e75d.jpg" alt="4:4:1 poster, 2021." loading="lazy" decoding="async">
+            </div>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://trauma.art/program/lounge" target="_blank">Lounge</a>
+            <p class="project-context">TRAUMA Arts and Culture, Berlin</p>
+            <p class="project-subtitle">Marga Alfeirão with Mariana Benenge, Myriam Lucas, and Shaka Lion. A choreographic exploration of relaxation, comfort, and assertive femininity, influenced by dance cultures of the African diaspora. Restaging of the original duo in an expanded cast, with a new lighting design created for TRAUMA. Originally produced with Sophiensaele, funded by the Senate Department for Culture and Europe.</p>
+            <p class="project-includes">This production includes Performance, Choreography, and Live Music.</p>
+            <p class="project-role">Curation &amp; Production</p>
+            <figure style="margin-top:1rem;margin-bottom:0">
+              <img src="images/img-11-e3beee204d.jpg" alt="Lounge, Marga Alfeirão, 2023. © Mayra Wallraf" class="site-photo" loading="lazy" decoding="async">
+              <figcaption style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.4rem">© Mayra Wallraf</figcaption>
+            </figure>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <a class="project-title" href="https://trauma.art/program/main-body-opening" target="_blank">Main Body — Opening</a>
+            <p class="project-context">TRAUMA Arts and Culture, Berlin · Sep 2023</p>
+            <p class="project-subtitle">Choreography by Johnny McMillan, performed by Sally von Rosen. A commissioned contemporary interpretation of L'Après-midi d'un faune as a 15-minute solo by Johnny McMillan within an installation by Sally von Rosen.</p>
+            <p class="project-includes">This production includes Neoclassical Ballet.</p>
+            <p class="project-role">Curation &amp; Production</p>
+            <div class="photo-frame carousel">
+              <img class="active" src="images/img-12-f1f37e90d5.jpg" alt="Main Body — Opening, Johnny McMillan / Sally von Rosen, 2023. © Camille Blake" loading="lazy" decoding="async">
+              <img src="images/img-13-b92062d75e.jpg" alt="Main Body — Opening, Johnny McMillan / Sally von Rosen, 2023. © Camille Blake" loading="lazy" decoding="async">
+            </div>
+            <p style="font-size:10px;letter-spacing:0.08em;color:var(--ink-faint);margin-top:0.4rem">© Camille Blake</p>
+          </div>
+        </li>
+        <li class="project-item">
+          <div class="project-name-wrap">
+            <span class="project-title">Jury Member, Dance Commission</span>
+            <p class="project-context">DRAC Normandie and Hauts-de-France, Ministère de la Culture, France · 2020–2024</p>
+            <p class="project-includes">This production includes Application Reviewing.</p>
+            <p class="project-role">Expert Jury</p>
+            <figure style="margin-top:1rem;margin-bottom:0">
+              <img src="images/img-14-c2d69a397b.png" alt="Ministère de la Culture" style="height:70px;display:block;opacity:0.85" loading="lazy" decoding="async">
+            </figure>
+          </div>
+        </li>
+      </ul>
+
+      <!-- WORKSHOPS -->
+      <div class="workshops-section">
+        <p class="section-title">Workshops</p>
+        <p class="workshops-intro">A series of long-format workshops designed for professional movers and dedicated amateurs, co-conceptualised with the instructors and hosted at TRAUMA's dance studio. Each workshop approached a single theme from multiple perspectives, bridging theory and practice within an intimate group setting.</p>
+        <ul class="workshop-list">
+          <li class="workshop-item">
+            <p class="workshop-title">Body of the Heart: Tools for Openness</p>
+            <p class="workshop-artists">Michelle Moura &amp; Elisabete Finger</p>
+            <p class="workshop-desc">A workshop exploring the psychophysical dimensions that move us, drawing on tools from Kundalini Yoga and contemporary dance practice.</p>
+          </li>
+          <li class="workshop-item">
+            <p class="workshop-title">Holding Each Other: Moving and Writing Through Vulnerability</p>
+            <p class="workshop-artists">Sorour Darabi, Saura &amp; oxi pëng</p>
+            <p class="workshop-desc">A five-hour journey through collective vulnerability, weaving movement, writing, and shared sensory experience into bubbly manifestos and bodily archives.</p>
+          </li>
+          <li class="workshop-item">
+            <p class="workshop-title">Caretaking: Tools for Sustaining in the Berlin Dance Scene</p>
+            <p class="workshop-artists">Cree Barnett Williams &amp; Shannon Leypoldt</p>
+            <p class="workshop-desc">A workshop and discussion for freelance dancers in Berlin, exchanging resources, care strategies, and tools for sustaining long-term dance careers.</p>
+          </li>
+          <li class="workshop-item">
+            <p class="workshop-title">Death in Spring</p>
+            <p class="workshop-artists">Saura</p>
+            <p class="workshop-desc">A yoga session touching on death and life as a full cycle, exploring each pose as if for the first and last time.</p>
+          </li>
+          <li class="workshop-item">
+            <p class="workshop-title">Vibrations</p>
+            <p class="workshop-artists">Saura</p>
+            <p class="workshop-desc">An active meditation journey exploring physical and introspective vibrations, set within TRAUMA's club floor transformed into a yoga space.</p>
+          </li>
+          <li class="workshop-item">
+            <p class="workshop-title">Holiday Grounding Session</p>
+            <p class="workshop-artists">Saura</p>
+            <p class="workshop-desc">An extended yoga class drawing from the Ashtanga Primary series, releasing the energies of the year through breathwork, flexibility, and shared tea.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <p class="footer-text">© 2026 Pierre Renard — Berlin, Germany</p>
+      <div class="footer-links">
+        <a class="footer-link" href="https://www.instagram.com/revalerstrasse" target="_blank">Instagram</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/pierre-renard-b37674113/" target="_blank">LinkedIn</a>
+        <a class="footer-link" onclick="showPage('imprint')">Imprint &amp; Privacy</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div class="page" id="page-contact">
+    <div class="page-header">
+      <a class="back-link" onclick="showPage('home')">← Back</a>
+      <h1 class="page-header-title">Get in touch</h1>
+    </div>
+    <section>
+      <div class="contact-grid">
+        <div>
+          <p style="font-size:15px;color:var(--ink-muted);max-width:400px;line-height:1.8">Open to production mandates, curatorial collaborations, and consulting for arts organisations across Europe.</p>
+        </div>
+        <div class="contact-right">
+          <a class="btn contact-mailto" href="mailto:pierre@renardrenard.com?subject=Hello Pierre">Send a message →</a>
+          <p class="contact-note">Clicking the button will open your email with my address prefilled.</p>
+          <div class="social-links">
+            <a class="social-link" href="https://www.instagram.com/revalerstrasse" target="_blank"><span class="social-link-label">Instagram</span><span>@revalerstrasse</span></a>
+            <a class="social-link" href="https://www.linkedin.com/in/pierre-renard-b37674113/" target="_blank"><span class="social-link-label">LinkedIn</span><span>Pierre Renard</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p class="footer-text">© 2026 Pierre Renard — Berlin, Germany</p>
+      <div class="footer-links">
+        <a class="footer-link" href="https://www.instagram.com/revalerstrasse" target="_blank">Instagram</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/pierre-renard-b37674113/" target="_blank">LinkedIn</a>
+        <a class="footer-link" onclick="showPage('imprint')">Imprint &amp; Privacy</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- IMPRINT PAGE -->
+  <div class="page" id="page-imprint">
+    <div class="page-header">
+      <a class="back-link" onclick="showPage('home')">← Back</a>
+      <h1 class="page-header-title">Imprint &amp; Privacy</h1>
+    </div>
+    <section>
+      <div class="imprint-grid">
+        <div>
+          <p class="imprint-label">Imprint</p>
+          <p class="imprint-text"><strong>Pierre Renard</strong><br>Berlin, Germany<br><br>© 2026 Pierre Renard. All rights reserved. All content on this site, including texts, images, and project documentation, is the property of Pierre Renard or of the respective clients and collaborators credited. Reproduction or use without prior written consent is prohibited.</p>
+        </div>
+        <div>
+          <p class="imprint-label">Privacy</p>
+          <p class="imprint-text">This site does not collect, store, or share any personal data. No cookies, no tracking, no analytics. If you reach out by email, your message is used solely to respond to you.</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p class="footer-text">© 2026 Pierre Renard — Berlin, Germany</p>
+      <div class="footer-links">
+        <a class="footer-link" href="https://www.instagram.com/revalerstrasse" target="_blank">Instagram</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/pierre-renard-b37674113/" target="_blank">LinkedIn</a>
+        <p class="footer-text">renardrenard.com</p>
+      </div>
+    </footer>
+  </div>
+
+</main>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  var el=document.getElementById('nav-'+id);
+  if(el)el.classList.add('active');
+  window.scrollTo(0,0);
+}
+
+document.querySelectorAll('.photo-frame.carousel').forEach(function(frame){
+  var imgs = frame.querySelectorAll('img');
+  if (imgs.length < 2) return;
+  var interval = parseInt(frame.getAttribute('data-interval'), 10) || 3000;
+  var caption = frame.parentElement.querySelector('[data-caption-target]');
+  var idx = 0;
+  setInterval(function(){
+    imgs[idx].classList.remove('active');
+    idx = (idx + 1) % imgs.length;
+    imgs[idx].classList.add('active');
+    if (caption) {
+      var text = imgs[idx].getAttribute('data-caption') || imgs[idx].getAttribute('alt');
+      caption.textContent = text;
+    }
+  }, interval);
+});
+</script>
+</body>
+</html>
