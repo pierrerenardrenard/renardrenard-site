@@ -75,7 +75,7 @@
             font-size: 1.5rem;
             color: var(--text-light);
             font-weight: 400;
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--space-lg);
         }
 
         .hosted {
@@ -243,18 +243,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        .slide-placeholder {
-            width: 100%;
-            height: 100%;
-            background: var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-style: italic;
-            font-size: 0.9rem;
         }
 
         .carousel-dots {
@@ -478,13 +466,14 @@
 
             <div class="carousel-container">
                 <div class="carousel">
-                    <div class="slide active"><div class="slide-placeholder">Photo</div></div>
-                    <div class="slide"><div class="slide-placeholder">Photo</div></div>
-                    <div class="slide"><div class="slide-placeholder">Photo</div></div>
-                    <div class="slide"><div class="slide-placeholder">Photo</div></div>
-                    <div class="slide"><div class="slide-placeholder">Photo</div></div>
-                    <div class="slide"><div class="slide-placeholder">Photo</div></div>
-                    <div class="slide"><div class="slide-placeholder">Photo</div></div>
+                    <div class="slide active"><img src="images/ripe/1.jpg" alt=""></div>
+                    <div class="slide"><img src="images/ripe/2.jpg" alt=""></div>
+                    <div class="slide"><img src="images/ripe/3.jpg" alt=""></div>
+                    <div class="slide"><img src="images/ripe/4.jpg" alt=""></div>
+                    <div class="slide"><img src="images/ripe/5.jpg" alt=""></div>
+                    <div class="slide"><img src="images/ripe/6.jpg" alt=""></div>
+                    <div class="slide"><img src="images/ripe/7.jpg" alt=""></div>
+                    <div class="slide"><img src="images/ripe/8.jpg" alt=""></div>
                 </div>
                 <div class="carousel-dots">
                     <span class="dot active" onclick="showSlide(0)"></span>
