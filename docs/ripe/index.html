@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ripe — White and Orange Edition</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
     <style>
         :root {
             --bg: #FAF8F5;
@@ -48,11 +48,11 @@
         }
 
         body {
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Roboto Mono', 'Courier New', monospace;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .container {
@@ -63,25 +63,28 @@
         }
 
         h1 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 3.5rem;
-            font-weight: 600;
+            font-family: 'Roboto Mono', 'Courier New', monospace;
+            font-size: 3rem;
+            font-weight: 700;
             line-height: 1.1;
             margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
         }
 
         .logo {
             width: 150px;
             height: auto;
             display: block;
-            margin: 0 auto 0.5rem;
+            margin: 0 auto var(--space-md);
         }
 
         .subtitle {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.5rem;
+            font-family: 'Roboto Mono', 'Courier New', monospace;
+            font-size: 1.15rem;
             color: var(--text-light);
             font-weight: 400;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
             margin-bottom: var(--space-lg);
         }
 
@@ -92,9 +95,10 @@
         }
 
         .opening-text {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.3rem;
+            font-family: 'Roboto Mono', 'Courier New', monospace;
+            font-size: 1.05rem;
             font-style: italic;
+            font-weight: 400;
             line-height: 1.7;
             color: var(--text-light);
             margin-bottom: var(--space-md);
@@ -104,13 +108,13 @@
         }
 
         .body-text {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--text-light);
             margin-bottom: var(--space-md);
             max-width: 65ch;
             margin-left: auto;
             margin-right: auto;
-            text-align: justify;
+            text-align: left;
         }
 
         .credits {
@@ -123,16 +127,17 @@
         }
 
         .credit-role {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-light);
-            text-transform: capitalize;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
             margin-bottom: 0.25rem;
         }
 
         .credit-name {
-            font-weight: 500;
+            font-weight: 700;
             color: var(--text-light);
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .credits-thanks {
@@ -159,9 +164,11 @@
         }
 
         h2 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.8rem;
-            font-weight: 600;
+            font-family: 'Roboto Mono', 'Courier New', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
             margin-top: var(--space-lg);
             margin-bottom: var(--space-md);
             color: var(--text);
@@ -208,8 +215,10 @@
             color: var(--bg);
             padding: 0.75rem 1.5rem;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            font-size: 0.85rem;
             margin-top: var(--space-md);
             margin-right: 0.5rem;
             margin-bottom: var(--space-md);
