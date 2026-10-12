@@ -52,7 +52,7 @@ section{padding:6rem 4rem}
 .hero-meta-item{display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.08em;padding:0.6rem 0;border-top:0.5px solid var(--ink-faint);color:var(--ink-muted);gap:1rem}
 .hero-meta-item:last-child{border-bottom:0.5px solid var(--ink-faint)}
 .hero-meta-item span:first-child{white-space:nowrap}
-.hero-meta-item span:last-child{color:var(--ink);text-align:right}
+.hero-meta-item span:last-child{color:var(--ink);text-align:right;line-height:1.9}
 
 /* NEXT UP */
 .coming-up-item{padding:2rem 0;border-top:0.5px solid var(--ink-faint)}
@@ -151,6 +151,14 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
 .hero-cta{animation:fadeUp 0.8s ease 0.25s both}
 .hero-right{animation:fadeUp 0.8s ease 0.4s both}
 
+/* WIDE SCREENS: cap content width */
+:root{--gutter:max(4rem, calc((100vw - 1280px) / 2))}
+nav{padding-left:var(--gutter);padding-right:var(--gutter)}
+section{padding-left:var(--gutter);padding-right:var(--gutter)}
+.page-header{padding-left:var(--gutter);padding-right:var(--gutter)}
+footer{padding-left:var(--gutter);padding-right:var(--gutter)}
+.hero{min-height:min(calc(100vh - 80px), 900px)}
+.photo-frame,.site-photo{max-width:960px}
 @media(max-width:768px){
   nav{padding:1.25rem 1.5rem}
   .nav-links{gap:1rem}
@@ -201,18 +209,17 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
       </div>
       <div class="hero-right">
         <p class="hero-bio">I support artists and arts organisations to develop their visions within space, time, and budget, across live performance, live music, the club scene, and contemporary art.</p>
-        <p class="hero-about">Based in Berlin for over a decade, I have built a practice spanning both institutional and independent contexts, producing large-scale live events, developing dance programmes, and serving on national jury panels for choreography. My work moves fluidly between production and curation, bringing the same rigour to a 50-person event as to a 10,000+ person festival. Over the years I have built a reliable network of collaborators across every discipline, from sound to lighting design, front of house team, artists, and music producers. I am able to source the right set of partners from alternative to institutional contexts.</p>
+        <p class="hero-about">Based in Berlin for over a decade, I have built a practice spanning both institutional and independent contexts, producing large-scale live events, developing dance programmes, and serving on national jury panels for choreography. My work moves fluidly between production and curation, bringing the same rigour to a 50-person event as to a 10,000+ person festival. Over the years I have built a reliable network of collaborators for alternative or institutional contexts; artists, musicians, choreographers, dancers, technical teams, front of house team...</p>
         <div>
-          <div class="hero-meta-item"><span>Discipline</span><span>Live Performance · Live Music · Event Production · Contemporary Art</span></div>
-          <div class="hero-meta-item"><span>Based</span><span>Berlin, Germany · Open to relocation</span></div>
-          <div class="hero-meta-item"><span>Available for</span><span>Production · Curation · Consulting · Event Management</span></div>
+          <div class="hero-meta-item"><span>Discipline</span><span>Live Performance · Live Music · Contemporary Art · Event Production</span></div>
+          <div class="hero-meta-item"><span>Based</span><span>Berlin, Germany · Mobile</span></div>
+          <div class="hero-meta-item"><span>Services</span><span>Production of live experiences (Music, Performance, Club, Festival, Culinary)<br>Project Management<br>Event Production<br>Stage Management<br>Door &amp; Entrance Management<br>Curation in Performing Arts<br>Night Management</span></div>
         </div>
       </div>
     </section>
 
     <div class="rule"></div>
 
-<!-- NEXT UP (hidden for now)
     <section>
       <p class="section-title">Next Up</p>
       <div class="coming-up-item">
@@ -227,7 +234,6 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
     </section>
 
     <div class="rule"></div>
--->
 
     <section>
       <p class="section-title">Selected Productions</p>
@@ -260,8 +266,8 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
         </li>
         <li class="project-item">
           <div class="project-name-wrap">
-            <span class="project-title">WHOLE Festival — Editions 7 &amp; 8</span>
-            <p class="project-context">Ferropolis, Gräfenhainichen · 2022–2026</p>
+            <span class="project-title">WHOLE Festival — Editions 2 to 8</span>
+            <p class="project-context">Ferropolis, Gräfenhainichen · 2019–2026</p>
             <p class="project-subtitle">The largest queer electronic music festival in the world, 10,000+ guests across six stages at Ferropolis</p>
             <p class="project-role">Production · Artist Liaison</p>
             <div class="photo-frame carousel">
@@ -396,8 +402,8 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
         </li>
         <li class="project-item">
           <div class="project-name-wrap">
-            <span class="project-title">WHOLE Festival — Editions 7 &amp; 8</span>
-            <p class="project-context">Ferropolis, Gräfenhainichen · 2022–2026</p>
+            <span class="project-title">WHOLE Festival — Editions 2 to 8</span>
+            <p class="project-context">Ferropolis, Gräfenhainichen · 2019–2026</p>
             <p class="project-subtitle">The largest queer electronic music festival in the world, 10,000+ guests across six stages at Ferropolis</p>
             <p class="project-role">Production · Artist Liaison</p>
             <div class="photo-frame carousel">
