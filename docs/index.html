@@ -151,6 +151,16 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
 .hero-cta{animation:fadeUp 0.8s ease 0.25s both}
 .hero-right{animation:fadeUp 0.8s ease 0.4s both}
 
+/* SERVICES */
+.service-list{list-style:none;max-width:860px}
+.service-item{display:flex;gap:2rem;align-items:baseline;padding:1.4rem 0;border-top:0.5px solid var(--ink-faint)}
+.service-item:last-child{border-bottom:0.5px solid var(--ink-faint)}
+.service-num{font-size:11px;letter-spacing:0.1em;color:var(--ink-muted);min-width:2rem}
+.service-name{font-family:var(--serif);font-size:1.6rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.2;display:flex;flex-direction:column;gap:0.35rem}
+.service-note{font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:0.04em;color:var(--ink-muted)}
+.services-meta{max-width:860px;margin-top:4rem}
+@media(max-width:768px){nav{flex-wrap:wrap;row-gap:0.75rem;padding-top:1rem;padding-bottom:0.9rem}.nav-name{white-space:nowrap}.nav-links{width:100%;justify-content:space-between;gap:0.5rem}.nav-imprint-li{display:none}main{padding-top:110px}}
+@media(max-width:768px){.service-name{font-size:1.25rem}.service-item{gap:1rem;padding:1.1rem 0}}
 /* WIDE SCREENS: cap content width */
 :root{--gutter:max(4rem, calc((100vw - 1280px) / 2))}
 nav{padding-left:var(--gutter);padding-right:var(--gutter)}
@@ -184,8 +194,9 @@ footer{padding-left:var(--gutter);padding-right:var(--gutter)}
   <ul class="nav-links">
     <li><a onclick="showPage('production')" id="nav-production">Production</a></li>
     <li><a onclick="showPage('curation')" id="nav-curation">Curation</a></li>
+    <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
     <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
-    <li><a onclick="showPage('imprint')" id="nav-imprint">Imprint</a></li>
+    <li class="nav-imprint-li"><a onclick="showPage('imprint')" id="nav-imprint">Imprint</a></li>
   </ul>
 </nav>
 
@@ -210,11 +221,6 @@ footer{padding-left:var(--gutter);padding-right:var(--gutter)}
       <div class="hero-right">
         <p class="hero-bio">I support artists and arts organisations to develop their visions within space, time, and budget, across live performance, live music, the club scene, and contemporary art.</p>
         <p class="hero-about">Based in Berlin for over a decade, I have built a practice spanning both institutional and independent contexts, producing large-scale live events, developing dance programmes, and serving on national jury panels for choreography. My work moves fluidly between production and curation, bringing the same rigour to a 50-person event as to a 10,000+ person festival. Over the years I have built a reliable network of collaborators for alternative or institutional contexts: artists, musicians, choreographers, dancers, technical teams, front of house teams, and hospitality teams.</p>
-        <div>
-          <div class="hero-meta-item"><span>Discipline</span><span>Live Performance · Live Music · Contemporary Art · Event Production</span></div>
-          <div class="hero-meta-item"><span>Based</span><span>Berlin, Germany · Mobile</span></div>
-          <div class="hero-meta-item"><span>Services</span><span>Production of live experiences (Music, Performance, Club, Festival, Culinary)<br>Project Management<br>Event Production<br>Stage Management<br>Artist Care<br>Door &amp; Entrance Management<br>Curation in Performing Arts<br>Night Management</span></div>
-        </div>
       </div>
     </section>
 
@@ -695,6 +701,39 @@ footer{padding-left:var(--gutter);padding-right:var(--gutter)}
   </div>
 
   <!-- CONTACT PAGE -->
+  <!-- SERVICES PAGE -->
+  <div class="page" id="page-services">
+    <div class="page-header">
+      <a class="back-link" onclick="showPage('home')">← Back</a>
+      <h1 class="page-header-title">Services</h1>
+    </div>
+    <section>
+      <ul class="service-list">
+        <li class="service-item"><span class="service-num">01</span><span class="service-name">Production of live experiences<span class="service-note">Music, Performance, Club, Festival, Culinary</span></span></li>
+        <li class="service-item"><span class="service-num">02</span><span class="service-name">Project Management</span></li>
+        <li class="service-item"><span class="service-num">03</span><span class="service-name">Event Production</span></li>
+        <li class="service-item"><span class="service-num">04</span><span class="service-name">Stage Management</span></li>
+        <li class="service-item"><span class="service-num">05</span><span class="service-name">Artist Care</span></li>
+        <li class="service-item"><span class="service-num">06</span><span class="service-name">Door &amp; Entrance Management</span></li>
+        <li class="service-item"><span class="service-num">07</span><span class="service-name">Curation in Performing Arts</span></li>
+        <li class="service-item"><span class="service-num">08</span><span class="service-name">Night Management</span></li>
+      </ul>
+      <div class="services-meta">
+        <div class="hero-meta-item"><span>Discipline</span><span>Live Performance · Live Music · Contemporary Art · Event Production</span></div>
+        <div class="hero-meta-item"><span>Based</span><span>Berlin, Germany · Mobile</span></div>
+      </div>
+      <div style="margin-top:3rem;text-align:right"><a class="btn view-all-link" onclick="showPage('contact')">Get in touch →</a></div>
+    </section>
+    <footer>
+      <p class="footer-text">© 2026 Pierre Renard — Berlin, Germany</p>
+      <div class="footer-links">
+        <a class="footer-link" href="https://www.instagram.com/revalerstrasse" target="_blank">Instagram</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/pierre-renard-b37674113/" target="_blank">LinkedIn</a>
+        <a class="footer-link" onclick="showPage('imprint')">Imprint &amp; Privacy</a>
+      </div>
+    </footer>
+  </div>
+
   <div class="page" id="page-contact">
     <div class="page-header">
       <a class="back-link" onclick="showPage('home')">← Back</a>
