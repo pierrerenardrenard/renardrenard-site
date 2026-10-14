@@ -151,6 +151,8 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
 .hero-cta{animation:fadeUp 0.8s ease 0.25s both}
 .hero-right{animation:fadeUp 0.8s ease 0.4s both}
 
+.triptych{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:1rem;max-width:960px}
+.triptych img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
 /* SERVICES */
 .service-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:3rem 1.5rem}
 .service-item{display:flex;flex-direction:column;gap:0.9rem}
@@ -540,9 +542,7 @@ footer{padding-left:var(--gutter);padding-right:var(--gutter)}
             <p class="project-subtitle">An evening of wine tasting paired with music and performance, hosted with Maryisonacid. A liquid and sonic journey through four regions, Corsica, Lombardy, Burgundy and Georgia, with minerality as the thread. The evening culminated in a live performance by Alishanee Chafe-Hearmon and Fox Conner (Symbolic Movement Choir).</p>
             <p class="project-includes">This production includes Curation, Production, Wine Tasting, Music, and Georgian Folk Dance.</p>
             <p class="project-role">Host &amp; Artistic Direction</p>
-            <figure style="margin-top:1rem;margin-bottom:0">
-              <img src="images/ripe/performers.jpg" alt="Alishanee Chafe-Hearmon and Fox Conner, Symbolic Movement Choir" class="site-photo" style="aspect-ratio:auto;max-width:480px" loading="lazy" decoding="async">
-            </figure>
+            <div class="triptych"><img src="images/ripe/wo-1.jpg" alt="Ripe, White and Orange Edition: candlelit tasting table" loading="lazy" decoding="async"><img src="images/ripe/wo-2.jpg" alt="Ripe, White and Orange Edition: guest tasting at the long table" loading="lazy" decoding="async"><img src="images/ripe/wo-3.jpg" alt="Ripe, White and Orange Edition: a glass of orange wine" loading="lazy" decoding="async"></div>
           </div>
         </li>
         <li class="project-item">
