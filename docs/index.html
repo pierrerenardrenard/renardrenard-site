@@ -153,6 +153,9 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
 
 .triptych{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:1rem;max-width:960px}
 .triptych img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
+/* LIST PAGES: single line under title, tighter gap */
+#page-production .page-header,#page-curation .page-header{border-bottom:none;padding-bottom:1.5rem}
+#page-production .page-header + section,#page-curation .page-header + section{padding-top:1.5rem}
 /* SERVICES */
 .service-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:3rem 1.5rem}
 .service-item{display:flex;flex-direction:column;gap:0.9rem}
