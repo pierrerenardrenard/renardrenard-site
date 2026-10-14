@@ -159,7 +159,7 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
 .service-item img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--ink-faint)}
 .service-name{font-family:var(--serif);font-size:1.35rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.25;display:flex;flex-direction:column;gap:0.35rem}
 .service-note{font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:0.04em;color:var(--ink-muted)}
-.services-meta{display:grid;grid-template-columns:1fr 2fr;gap:2rem;margin-bottom:4rem;padding-bottom:3rem;border-bottom:0.5px solid var(--ink-faint)}
+.services-meta{display:grid;grid-template-columns:1fr 2fr;gap:2rem;margin-top:5rem;padding-top:3rem;border-top:0.5px solid var(--ink-faint)}
 .services-meta-item{display:flex;flex-direction:column;gap:0.6rem}
 .services-meta-label{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted)}
 .services-meta-value{font-family:var(--serif);font-size:1.9rem;font-weight:300;line-height:1.25;color:var(--ink)}
@@ -713,10 +713,6 @@ footer{padding-left:var(--gutter);padding-right:var(--gutter)}
       <h1 class="page-header-title">Services</h1>
     </div>
     <section>
-      <div class="services-meta">
-        <div class="services-meta-item"><span class="services-meta-label">Based in</span><span class="services-meta-value">Berlin, Germany · Mobile</span></div>
-        <div class="services-meta-item"><span class="services-meta-label">Discipline</span><span class="services-meta-value">Live Performance · Live Music · Contemporary Art · Event Production</span></div>
-      </div>
       <ul class="service-list">
         <li class="service-item"><img src="images/services/01-production.jpg" alt="Production of live experiences" loading="lazy" decoding="async"><span class="service-name">Production of live experiences<span class="service-note">Music, Performance, Club, Festival, Culinary</span></span></li>
         <li class="service-item"><img src="images/services/02-curation.jpg" alt="Curation in Performing Arts" loading="lazy" decoding="async"><span class="service-name">Curation in Performing Arts</span></li>
@@ -728,6 +724,10 @@ footer{padding-left:var(--gutter);padding-right:var(--gutter)}
         <li class="service-item"><img src="images/services/08-project-management.jpg" alt="Project Management" loading="lazy" decoding="async"><span class="service-name">Project Management</span></li>
         <li class="service-item"><img src="images/services/09-nightclub.jpg" alt="Nightclub Operation, Night Management" loading="lazy" decoding="async"><span class="service-name">Nightclub Operation, Night Management</span></li>
       </ul>
+      <div class="services-meta">
+        <div class="services-meta-item"><span class="services-meta-label">Based in</span><span class="services-meta-value">Berlin, Germany · Mobile</span></div>
+        <div class="services-meta-item"><span class="services-meta-label">Discipline</span><span class="services-meta-value">Live Performance · Live Music · Contemporary Art · Event Production</span></div>
+      </div>
       <div style="margin-top:3rem;text-align:right"><a class="btn view-all-link" onclick="showPage('contact')">Get in touch →</a></div>
     </section>
     <footer>
