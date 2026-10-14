@@ -152,15 +152,15 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
 .hero-right{animation:fadeUp 0.8s ease 0.4s both}
 
 /* SERVICES */
-.service-list{list-style:none;max-width:860px}
-.service-item{display:flex;gap:2rem;align-items:baseline;padding:1.4rem 0;border-top:0.5px solid var(--ink-faint)}
-.service-item:last-child{border-bottom:0.5px solid var(--ink-faint)}
-.service-num{font-size:11px;letter-spacing:0.1em;color:var(--ink-muted);min-width:2rem}
-.service-name{font-family:var(--serif);font-size:1.6rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.2;display:flex;flex-direction:column;gap:0.35rem}
+.service-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:3rem 1.5rem}
+.service-item{display:flex;flex-direction:column;gap:0.9rem}
+.service-item img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--ink-faint)}
+.service-name{font-family:var(--serif);font-size:1.35rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.25;display:flex;flex-direction:column;gap:0.35rem}
 .service-note{font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:0.04em;color:var(--ink-muted)}
-.services-meta{max-width:860px;margin-top:4rem}
+.services-meta{max-width:860px;margin-top:5rem}
+@media(max-width:1024px){.service-list{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){nav{flex-wrap:wrap;row-gap:0.75rem;padding-top:1rem;padding-bottom:0.9rem}.nav-name{white-space:nowrap}.nav-links{width:100%;justify-content:space-between;gap:0.5rem}.nav-imprint-li{display:none}main{padding-top:110px}}
-@media(max-width:768px){.service-name{font-size:1.25rem}.service-item{gap:1rem;padding:1.1rem 0}}
+@media(max-width:600px){.service-list{grid-template-columns:1fr;gap:2.5rem}.service-name{font-size:1.25rem}}
 /* WIDE SCREENS: cap content width */
 :root{--gutter:max(4rem, calc((100vw - 1280px) / 2))}
 nav{padding-left:var(--gutter);padding-right:var(--gutter)}
@@ -710,15 +710,15 @@ footer{padding-left:var(--gutter);padding-right:var(--gutter)}
     </div>
     <section>
       <ul class="service-list">
-        <li class="service-item"><span class="service-name">Production of live experiences<span class="service-note">Music, Performance, Club, Festival, Culinary</span></span></li>
-        <li class="service-item"><span class="service-name">Curation in Performing Arts</span></li>
-        <li class="service-item"><span class="service-name">Event Production</span></li>
-        <li class="service-item"><span class="service-name">Stage Management</span></li>
-        <li class="service-item"><span class="service-name">Artist Care</span></li>
-        <li class="service-item"><span class="service-name">Touring</span></li>
-        <li class="service-item"><span class="service-name">Door &amp; Entrance Management</span></li>
-        <li class="service-item"><span class="service-name">Project Management</span></li>
-        <li class="service-item"><span class="service-name">Nightclub Operation, Night Management</span></li>
+        <li class="service-item"><img src="images/services/01-production.jpg" alt="Production of live experiences" loading="lazy" decoding="async"><span class="service-name">Production of live experiences<span class="service-note">Music, Performance, Club, Festival, Culinary</span></span></li>
+        <li class="service-item"><img src="images/services/02-curation.jpg" alt="Curation in Performing Arts" loading="lazy" decoding="async"><span class="service-name">Curation in Performing Arts</span></li>
+        <li class="service-item"><img src="images/services/03-event-production.jpg" alt="Event Production" loading="lazy" decoding="async"><span class="service-name">Event Production</span></li>
+        <li class="service-item"><img src="images/services/04-stage-management.jpg" alt="Stage Management" loading="lazy" decoding="async"><span class="service-name">Stage Management</span></li>
+        <li class="service-item"><img src="images/services/05-artist-care.jpg" alt="Artist Care" loading="lazy" decoding="async"><span class="service-name">Artist Care</span></li>
+        <li class="service-item"><img src="images/services/06-touring.jpg" alt="Touring" loading="lazy" decoding="async"><span class="service-name">Touring</span></li>
+        <li class="service-item"><img src="images/services/07-door.jpg" alt="Door &amp; Entrance Management" loading="lazy" decoding="async"><span class="service-name">Door &amp; Entrance Management</span></li>
+        <li class="service-item"><img src="images/services/08-project-management.jpg" alt="Project Management" loading="lazy" decoding="async"><span class="service-name">Project Management</span></li>
+        <li class="service-item"><img src="images/services/09-nightclub.jpg" alt="Nightclub Operation, Night Management" loading="lazy" decoding="async"><span class="service-name">Nightclub Operation, Night Management</span></li>
       </ul>
       <div class="services-meta">
         <div class="hero-meta-item"><span>Discipline</span><span>Live Performance · Live Music · Contemporary Art · Event Production</span></div>
