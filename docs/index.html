@@ -25,7 +25,7 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:1.1859rem;line-height:1.7;min-height:100vh;overflow-x:hidden}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.5rem 4rem;background:var(--bg);border-bottom:0.5px solid var(--ink-faint)}
-.nav-name{font-family:var(--serif);font-size:clamp(1.210rem,1.133rem + 0.331vw,1.430rem);font-weight:300;letter-spacing:0.05em;color:var(--ink);text-decoration:none;cursor:pointer}
+.nav-name{font-family:var(--serif);font-size:clamp(1.375rem,1.155rem + 0.939vw,2.000rem);font-weight:300;letter-spacing:0.05em;color:var(--ink);text-decoration:none;cursor:pointer}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-size:0.8697rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;transition:color 0.2s;cursor:pointer}
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
@@ -135,7 +135,7 @@ section{padding:6rem 4rem}
 
 /* INNER PAGES */
 .page-header{padding:4rem 4rem 2rem;border-bottom:0.5px solid var(--ink-faint)}
-.page-header-title{font-family:var(--sans);font-size:clamp(2.125rem,1.289rem + 3.568vw,4.500rem);font-weight:400;letter-spacing:0.1em;text-transform:uppercase;line-height:1.05;color:var(--ink-muted)}
+.page-header-title{font-family:var(--sans);font-size:clamp(2.125rem,1.289rem + 3.568vw,4.500rem);font-weight:300;letter-spacing:0.1em;text-transform:uppercase;line-height:1.05;color:var(--ink-muted)}
 .back-link{display:inline-block;font-size:0.8697rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;margin-bottom:1.5rem;transition:color 0.2s;cursor:pointer}
 .back-link:hover{color:var(--ink)}
 .view-all-link{font-size:0.8697rem;padding:0.6rem 1.2rem}
@@ -199,6 +199,12 @@ footer{padding-left:var(--gutter);padding-right:var(--gutter)}
   .hero-meta-item span:last-child{text-align:right}
 }
 @media(max-width:400px){.nav-links a{letter-spacing:0.06em;font-size:0.7475rem}.nav-links{gap:0.25rem}.client-logo-text{font-size:0.8050rem;letter-spacing:0.04em;word-break:break-word}}
+/* HOME: two typefaces (serif titles / sans text), two sizes */
+#page-home .hero-tagline-text,#page-home .section-title,#page-home .coming-up-title,#page-home .project-title,#page-home .contact-heading{font-family:var(--serif);font-size:clamp(1.625rem,1.317rem + 1.315vw,2.500rem);font-weight:300;font-style:italic;line-height:1.25;letter-spacing:0}
+#page-home .hero-bio,#page-home .hero-about,#page-home .hero-cta,#page-home .coming-up-context,#page-home .coming-up-subtitle,#page-home .coming-up-role,#page-home .project-context,#page-home .project-subtitle,#page-home .project-includes,#page-home .project-role,#page-home .client-logo-text,#page-home .client-logo-type,#page-home .contact-sub,#page-home .contact-note,#page-home .contact-mailto,#page-home .social-link,#page-home .social-link-label,#page-home .btn,#page-home .ticket-link,#page-home .view-all-link,#page-home .footer-text,#page-home .footer-link{font-family:var(--sans);font-size:clamp(0.938rem,0.893rem + 0.188vw,1.062rem);line-height:1.7}
+#page-home .hero-about{font-weight:300;color:var(--ink-muted)}
+#page-home figcaption,#page-home p[style*="font-size"]{font-size:clamp(0.938rem,0.893rem + 0.188vw,1.062rem) !important}
+#page-home .section-title{margin-bottom:2rem}
 </style>
 </head>
 <body>
